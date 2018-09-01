@@ -7,7 +7,9 @@
 
 <% @discussion.comments.each do |comment| %>
   <div class="comment">
-  <p><%= comment.content %></p>
+    <div id="comment_content">
+      <%= comment.content %>
+    </div>
   <small>
     <p>
       <span class=chip>

@@ -6,11 +6,16 @@
 
 .discussion_content {
   margin-bottom: 20px;
+  white-space: pre-wrap;
 }
 
 .comment {
   border-bottom: 1px solid gray;
   padding: 10px;
+}
+
+#comment_content {
+  white-space: pre-wrap;
 }
 
 .comment:nth-child(odd) {
