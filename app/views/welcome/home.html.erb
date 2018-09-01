@@ -1,10 +1,11 @@
 <%= render 'guild_info' %>
 
 <div id="blurb">
-  <p>Hi! We are Presumptuous. Complete the form below to apply!</a></p>
+  <p>Hi! We are Presumptuous. Check out the <%= link_to 'forum', discussions_path %>!</a></p>
 </div>
 
-<%= render 'application_form' %>
+<!-- <%= render 'application_form' %>
+hiding this for now until we've linked up with Discord. -->
 
 <div id="images">
   <%= image_tag ('image_2.png'), :class => 'pic', :id => 'pic_1' %>
