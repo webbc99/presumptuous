@@ -83,3 +83,140 @@ textarea {
   margin-top: 15px;
   margin-bottom: 15px;
 }
+
+#guildInfo {
+  background-image: linear-gradient(90deg, white, #30c3dd);
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  width: 150%;
+  margin-left: -25%;
+  overflow: hidden;
+  text-align: center;
+}
+
+#guildInfoOne {
+  font-family: 'Quicksand', sans-serif;
+  margin-left: 1.66%;
+  font-weight: 700;
+  font-size: 26px;
+  text-transform: uppercase;
+  width: 50%;
+}
+
+#guildInfoTwo {
+  font-family: 'Quicksand', sans-serif;
+  margin-left: 1.66%;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  width: 50%;
+}
+
+#guildInfoThree {
+  font-family: 'Quicksand', sans-serif;
+  margin-left: 1.66%;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 50%;
+}
+
+.shadowsong {
+  color: #30c3dd;
+  animation-name: blueText;
+  animation-duration: 5s;
+}
+
+.guildFaction {
+  color: #30c3dd;
+  animation-name: blueText;
+  animation-duration: 5s;
+}
+
+.aszune {
+  color: #f747eb;
+  animation-name: pinkText;
+  animation-duration: 5s;
+}
+
+.guildRegion {
+  color: #f747eb;
+  animation-name: pinkText;
+  animation-duration: 5s;
+}
+
+.slash {
+  color: black
+}
+
+@keyframes blueText {
+  from {
+    color: black;
+  }
+  to {
+    color: #30c3dd;
+  }
+}
+
+@keyframes pinkText {
+  from {
+    color: black;
+  }
+  to {
+    color: #f747eb;
+  }
+}
+
+#application_form {
+  width: 30%;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  margin-left: 1.66%;
+}
+
+input {
+  outline: none;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+input[type=email] {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+input[type=radio] {
+  margin-right: 10%;
+}
+
+[type="radio"]:not(:checked), [type="radio"]:checked {
+     position: relative; 
+     opacity: 1; 
+}
+
+#images {
+  display: block;
+}
+
+footer {
+  clear: both;
+}
+
+.pic {
+  width: 30%;
+  float: left;
+  margin: 1.66%;
+  filter: grayscale(100%);
+  transition: filter 2s;
+  border-radius: 10px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.pic:hover {
+  filter: none;
+}
