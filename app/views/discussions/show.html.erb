@@ -1,0 +1,29 @@
+<div class="discussion_headline">
+  <h2><%= @discussion.headline %></h2>
+</div>
+
+<br>
+
+<div class="discussion_content">
+  <%= @discussion.content %>
+</div>
+
+<div class="article-meta-details">
+  <small>
+    <p>
+      <span class=chip>
+        <%= gravatar_for @discussion.user %>
+        <%= @discussion.user.name %>
+      </span> at <%= @discussion.created_at.strftime("%H:%M %Z") %> on <%= @discussion.created_at.strftime("%d/%m/%Y") %>
+    </p>
+  </small>
+</div>
+
+<%= render 'comments/comment' %>
+
+<br>
+
+<% if current_user.id == @discussion.user_id %>
+  <%= link_to 'Edit', edit_discussion_path(@discussion), :class => "waves-effect waves-light btn-small" %> | 
+<% end %>  
+<%= link_to 'Back', discussions_path, :class => "waves-effect waves-light btn-small" %>

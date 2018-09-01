@@ -1,0 +1,30 @@
+<small id="comment_count">
+  <%= pluralize(@comments.count, "Comment") %>
+</small>
+
+<br>
+<br>
+
+<% @discussion.comments.each do |comment| %>
+  <div class="comment">
+  <p><%= comment.content %></p>
+  <small>
+    <p>
+      <span class=chip>
+        <%= gravatar_for comment.user %>
+        <%= comment.user.name %>
+      </span> at <%= comment.created_at.strftime("%H:%M %Z") %> on <%= comment.created_at.strftime("%d/%m/%Y") %>
+    </p>
+  </small>
+  <% if current_user == comment.user %>
+    <%= link_to "Delete Comment", [comment.discussion, comment], method: :delete, :class => "waves-effect waves-light btn-small" %>
+    <%= link_to "Edit Comment", edit_discussion_comment_path(comment.discussion, comment), :class => "waves-effect waves-light btn-small" %>
+  <% end %>
+  </div>
+
+<% end %>
+
+
+
+<h5 id="add_comment_text">Add Comment</h5>
+<%= render 'comments/form' %>

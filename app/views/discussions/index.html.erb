@@ -1,0 +1,7 @@
+<div id="new_discussion_button">
+  <%= link_to 'New Discussion', new_discussion_path, class: 'waves-effect waves-light btn' %>
+</div>
+<div>
+  <h2>Discussions</h2>
+</div>
+<%= render 'discussion', obj: @discussions.order(created_at: :desc) %>

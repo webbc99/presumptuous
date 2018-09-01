@@ -1,0 +1,80 @@
+@import "materialize";
+
+.discussion_headline {
+  border-bottom: 1px solid black;
+}
+
+.discussion_content {
+  margin-bottom: 20px;
+}
+
+.comment {
+  border-bottom: 1px solid gray;
+  padding: 10px;
+}
+
+.comment:nth-child(odd) {
+  background-color: #e8e8e8;
+}
+
+.comment:nth-child(even) {
+  background-color: #eff6f7;
+}
+
+#comment_count {
+  border-bottom: 1px solid gray;
+}
+
+#comment_submit_button {
+  margin-top: 15px;
+}
+
+.text-area {
+  resize: none;
+}
+
+.chip {
+  color: white;
+  background-color: #1976d2;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+#discussion_headline {
+  padding-left: 12px;
+}
+
+.page-footer {
+  margin-top: 5%;
+  background-color: #1976d2;
+  width: 100%;
+}
+
+.footer-copyright {
+  background-color: #1976d2 !important;
+}
+
+#discussion_preview {
+  background-color: #e8e8e8;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.3);
+}
+
+#edit_submit_btn {
+  margin-bottom: 15px;
+}
+
+.edit_buttons {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

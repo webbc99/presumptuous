@@ -1,0 +1,14 @@
+<h5>Edit Comment</h5>
+
+<%= form_for([@discussion, @comment]) do |form| %>
+  <%= form.text_area :content %>
+  <div id="comment_submit_button">
+    <button class="waves-effect waves-light btn-small" type="submit" name="action">Submit</button>
+  </div>
+  <br>
+  <br>
+  <div id="comment_back_button">
+    <%= link_to 'Back', discussions_path, :class => "waves-effect waves-light btn-small" %>
+  </div>
+  <br>
+<% end %>

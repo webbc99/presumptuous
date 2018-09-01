@@ -1,0 +1,32 @@
+<h4>Discussions</h4>
+
+<%= link_to 'New Discussion', new_discussion_path, class: 'waves-effect waves-light btn' %>
+
+<table id="discussion_index" class="striped">
+  <thead>
+    <tr>
+      <th>Topic</th>
+      <th>Poster</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @discussions.each do |discussion| %>
+      <tr>
+        <td><%= link_to "#{discussion.headline}", discussion %></td>
+        <td><%= discussion.user.name %></td>
+        <td>
+          <% if current_user.owns_discussion?(discussion) %>
+            <%= link_to 'Edit', edit_discussion_path(discussion), class: 'waves-effect waves-light btn' %>
+            <%= link_to 'Delete', discussion, method: :delete, data: { confirm: 'Are you sure?' }, class: 'waves-effect waves-light btn' %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Discussion', new_discussion_path, class: 'waves-effect waves-light btn' %>
