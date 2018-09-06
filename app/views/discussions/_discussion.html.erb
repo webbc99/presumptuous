@@ -5,9 +5,9 @@
         <div class="discussion-title">
           <h4><%= link_to discussion.headline, discussion_path(discussion) %></h4>
         </div>
-        <div class="article-body">
+        <div class="discussion-body">
           <%= truncate(discussion.content, length: 100) %>
-          <div class="article-meta-details">
+          <div class="discussion-meta-details">
             <small>
               <p>
                 <span class=chip>

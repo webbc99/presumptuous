@@ -1,9 +1,8 @@
-<small id="comment_count">
-  <%= pluralize(@comments.count, "Comment") %>
-</small>
-
-<br>
-<br>
+<div id="comment_count">
+  <small>
+    <%= pluralize(@comments.count, "Comment") %>
+  </small>
+</div>
 
 <% @discussion.comments.each do |comment| %>
   <div class="comment">

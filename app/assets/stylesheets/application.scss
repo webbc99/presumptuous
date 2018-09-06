@@ -1,21 +1,51 @@
 @import "materialize";
 
+html {
+  line-height: 1.2;
+  font-family: 'Quicksand', sans-serif;
+}
+
 .discussion_headline {
-  border-bottom: 1px solid black;
+  padding: 0 1% 0 1%;
+  color: #fff;
+  padding-left: 12px;
+}
+
+.discussion_show .discussion_headline {
+  border-top-left-radius:  7px;
+  border-top-right-radius: 7px;
+}
+
+.discussion_show {
+  border-radius: 7px;
+}
+
+.discussion_show .discussion_headline h3 {
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
 .discussion_content {
   margin-bottom: 20px;
-  white-space: pre-wrap;
+  white-space: pre-line;
+  padding: 0 1% 2% 1%;
+}
+
+.dicussion-meta-details {
+  padding: 0 1% 1% 1%;
+}
+
+.discussion-title a {
+  letter-spacing: -1px;
 }
 
 .comment {
   border-bottom: 1px solid gray;
-  padding: 10px;
+  padding: 0 1% 1% 1%;
 }
 
 #comment_content {
-  white-space: pre-wrap;
+  white-space: pre-line;
 }
 
 .comment:nth-child(odd) {
@@ -27,7 +57,10 @@
 }
 
 #comment_count {
-  border-bottom: 1px solid gray;
+  padding-left: 1%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  // text-decoration: underline;
 }
 
 #comment_submit_button {
@@ -52,10 +85,6 @@ textarea {
   border-radius: 4px;
   background-color: #f8f8f8;
   resize: none;
-}
-
-#discussion_headline {
-  padding-left: 12px;
 }
 
 .page-footer {
@@ -95,7 +124,7 @@ textarea {
 }
 
 #guildInfoOne {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Prompt', sans-serif;
   margin-left: 1.66%;
   font-weight: 700;
   font-size: 26px;
@@ -104,7 +133,7 @@ textarea {
 }
 
 #guildInfoTwo {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Prompt', sans-serif;
   margin-left: 1.66%;
   font-weight: 700;
   font-size: 18px;
@@ -113,7 +142,7 @@ textarea {
 }
 
 #guildInfoThree {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Prompt', sans-serif;
   margin-left: 1.66%;
   font-weight: 700;
   font-size: 16px;

@@ -1,27 +1,24 @@
-<div class="discussion_headline">
-  <h2><%= @discussion.headline %></h2>
-</div>
+<div class="discussion_show z-depth-3 grey lighten-2">
+  <div class="discussion_headline blue darken-2 z-depth-2">
+    <h3><%= @discussion.headline %></h3>
+  </div>
+  <div class="discussion_content">
+    <%= @discussion.content %>
+  </div>
 
-<br>
-
-<div class="discussion_content">
-  <%= @discussion.content %>
-</div>
-
-<div class="article-meta-details">
-  <small>
-    <p>
-      <span class=chip>
-        <%= gravatar_for @discussion.user %>
-        <%= @discussion.user.name %>
-      </span> at <%= @discussion.created_at.strftime("%H:%M %Z") %> on <%= @discussion.created_at.strftime("%d/%m/%Y") %>
-    </p>
-  </small>
+  <div class="dicussion-meta-details">
+    <small>
+      <p>
+        <span class=chip>
+          <%= gravatar_for @discussion.user %>
+          <%= @discussion.user.name %>
+        </span> at <%= @discussion.created_at.strftime("%H:%M %Z") %> on <%= @discussion.created_at.strftime("%d/%m/%Y") %>
+      </p>
+    </small>
+  </div>
 </div>
 
 <%= render 'comments/comment' %>
-
-<br>
 
 <% if current_user.id == @discussion.user_id %>
   <%= link_to 'Edit', edit_discussion_path(@discussion), :class => "waves-effect waves-light btn-small" %> | 
