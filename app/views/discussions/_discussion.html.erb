@@ -1,8 +1,8 @@
 <% obj.each do |discussion| %>
   <div class="row">
-    <div class="col s10" class="z-depth-4" id="discussion_preview">
+    <div class="col s12" class="z-depth-4" id="discussion_preview">
       <div class="well well-lg">
-        <div class="discussion-title">
+        <div class="discussion-title blue darken-2 z-depth-2">
           <h4><%= link_to discussion.headline, discussion_path(discussion) %></h4>
         </div>
         <div class="discussion-body">

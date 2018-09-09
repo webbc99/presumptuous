@@ -1,17 +1,29 @@
 <%= render 'guild_info' %>
-
 <div id="blurb">
-  <p>Hi! We are Presumptuous. Check out the <%= link_to 'forum', discussions_path %>!</a></p>
+  <p>Hi! We are Presumptuous. 8/8 Uldir Normal! Check out the <%= link_to 'forum', discussions_path %>!</p>
 </div>
 
-<!-- <%= render 'application_form' %>
-hiding this for now until we've linked up with Discord. -->
+<button class="open-button waves-effect waves-light btn" id="join_us" onclick="openForm()">Join Us!</button>
+<%= render 'application_form' %>
 
-<div id="images">
-  <%= image_tag ('image_2.png'), :class => 'pic', :id => 'pic_1' %>
-  <%= image_tag ('image_4.png'), :class => 'pic', :id => 'pic_2' %>
-  <%= image_tag ('image_1.png'), :class => 'pic', :id => 'pic_3' %>
-  <%= image_tag ('lazarus.jpg'), :class => 'pic', :id => 'pic_1' %>
-  <%= image_tag ('hayley.jpg'), :class => 'pic', :id => 'pic_2' %>
-  <%= image_tag ('baby_frog.jpg'), :class => 'pic', :id => 'pic_3' %>
-</div>
+<%= image_tag ('image_2.png'), :class => 'pic w3-animate-fading', :id => 'pic_1' %>
+<%= image_tag ('image_4.png'), :class => 'pic w3-animate-fading', :id => 'pic_2' %>
+<%= image_tag ('image_1.png'), :class => 'pic w3-animate-fading', :id => 'pic_3' %>
+<%= image_tag ('lazarus.jpg'), :class => 'pic w3-animate-fading', :id => 'pic_4' %>
+
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("pic");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 9000);
+};
+</script>
