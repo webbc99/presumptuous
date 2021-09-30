@@ -6,6 +6,15 @@ html {
   font-family: 'Quicksand', sans-serif;
 }
 
+.alert {
+  background-color: salmon;
+  width: 50%;
+}
+
+.notice {
+  background-color: yellow;
+}
+
 .discussion_headline {
   padding: 0 1% 0 1%;
   color: #fff;

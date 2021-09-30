@@ -12,7 +12,8 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to discussion_path(@discussion)
     else
-      render 'new'
+      flash[:notice] = "Blah blah blah"
+      redirect_to discussion_path(@discussion)
     end
   end
 
